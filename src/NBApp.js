@@ -1,20 +1,17 @@
-import React, {useState} from 'react'
-import { PlayerGrid } from './PlayerGrid';
+import React from 'react'
+
 
 export const NBApp = () => {
 
-    const [players, setPlayers] = useState(["jordan","bird"]);
-    
+    const players= ["jordan","bird"];
     return (
         <div>
             <h1>NBA</h1>
-            <ul>
-                {
-                players.map(player=>(
-                    <PlayerGrid key={player} player={player} />
-                ))
-                }
-            </ul>
+         {    <ul>
+              <li>{players}</li>
+            </ul> }
         </div>
     )
             }
+
+
