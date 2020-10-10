@@ -1,15 +1,16 @@
 import React from 'react'
+import {PlayerGrid} from './components/PlayerGrid'
 
 
 export const NBApp = () => {
+    
+    
 
-    const players= ["jordan","bird"];
     return (
         <div>
             <h1>NBA</h1>
-         {    <ul>
-              <li>{players}</li>
-            </ul> }
+            <hr></hr>
+            <PlayerGrid/>
         </div>
     )
             }
