@@ -1,8 +1,10 @@
 
 
 
-export const getDataPlayers= async() =>{
-    const url=`https://www.balldontlie.io/api/v1/players`;
+export const getDataPlayers= async(page) =>{
+
+    const url=`https://www.balldontlie.io/api/v1/players?page=${page}&per_page=20`;
+
     const res= await fetch(url);
     const {data}= await res.json();
 
@@ -15,7 +17,8 @@ export const getDataPlayers= async() =>{
             position:player.position,
             team:player.team.full_name,
             conference:player.team.conference,
-            division:player.team.division
+            division:player.team.division,
+            id:player.id
         }
     })
     /* console.log(players) */

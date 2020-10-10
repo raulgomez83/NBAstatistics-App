@@ -1,5 +1,5 @@
 import React from "react";
-/*import Proptypes from 'prop-types' */
+import Proptypes from 'prop-types' 
 
 export const PlayerItem=({player})=>{
     return(
@@ -7,7 +7,6 @@ export const PlayerItem=({player})=>{
         <ul>
           <li>{player.firstname}</li>
           <li>{player.surname}</li>
-          <li>{player.position}</li>
           <li>{player.team}</li>
           <li>{player.conference}</li>
           <li>{player.division}</li>
@@ -15,11 +14,6 @@ export const PlayerItem=({player})=>{
         </>
     )
 }
-/* PlayerItem.propTypes={
-    firstname:Proptypes.string.isRequired,
-    surname:Proptypes.string.isRequired,
-    position:Proptypes.string.isRequired,
-    team:Proptypes.string.isRequired,
-    conference:Proptypes.string.isRequired,
-    division:Proptypes.string.isRequired,
-} */
+ PlayerItem.propTypes={
+    player:Proptypes.object.isRequired
+} 
