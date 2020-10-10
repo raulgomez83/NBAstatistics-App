@@ -1,27 +1,23 @@
 import React from 'react';
 import { PlayerItem } from './PlayerItem';
-import { useState,useEffect } from "react"
+import { useState, useEffect } from "react"
 import {getDataPlayers} from '../helpers'
 
 
-export const PlayerGrid = () => {
-    const [players, setPlayers] = useState({data:[]});
-    useEffect(()=>{
-    getDataPlayers().then((info)=>{
-        setPlayers({data:info});
+export const PlayerGrid = ({page}) => {
+    const [players, setPlayers] = useState([]);
+    useEffect( ()=>{ 
+    getDataPlayers(page).then((info)=>{
+        setPlayers(info);
     })
-},[]);
-
-const results=players.data
-
-
+},[page]);
     return (
         <>
-            <h3>Player</h3>
+            <h3>Players</h3>
             <div>
-            { results.map((result)=>{
+            { players.map((player)=>{
             return(
-                <PlayerItem key={result.surname} player={result}/>)
+                <PlayerItem key={player.id} player={player}/>)
             })}
             </div>
         </>
