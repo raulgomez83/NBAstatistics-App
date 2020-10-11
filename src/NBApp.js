@@ -7,6 +7,7 @@ export const NBApp = () => {
     const [page, setPage] = useState("")
 
     return (
+
         <div className="todo">
             <div className="logo" ></div>
             <h1>Player List</h1>

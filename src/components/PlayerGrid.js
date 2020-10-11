@@ -13,6 +13,7 @@ export const PlayerGrid = ({page}) => {
 },[page]);
     return (
         <>
+
             <ul>
             <li className="names">Player</li>
             <li className="names">Team</li>

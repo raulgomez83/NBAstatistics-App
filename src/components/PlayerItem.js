@@ -5,6 +5,7 @@ export const PlayerItem=({player})=>{
     return(
           <>
         <ul>
+
           <li>{player.firstname} {player.surname}</li>
           <li>{player.team}</li>
           <li>{player.conference}</li>
