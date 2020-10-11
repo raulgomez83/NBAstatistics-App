@@ -7,9 +7,13 @@ export const NBApp = () => {
     const [page, setPage] = useState("")
 
     return (
-        <div>
-            <h1>NBA</h1>
-            <p>Page: {page}</p>
+
+        <div className="todo">
+            <div className="logo" ></div>
+            <h1>Player List</h1>
+        
+         {/*    <img src="./images/nba.png" alt="nba logo"/>  */}
+            <p>Page: {page} of 33</p>
             <SelectPage setPage={setPage} />
             <hr></hr>
             <PlayerGrid page={page}/>

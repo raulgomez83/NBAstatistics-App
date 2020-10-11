@@ -22,6 +22,7 @@ export const SelectPage = ({setPage}) => {
   };
   return (
     <form onSubmit={handleSubmit}>
+      <label>Select page: </label>
       <input type="text" value={inputValue} onChange={handlePageChange} />
     </form>
   );

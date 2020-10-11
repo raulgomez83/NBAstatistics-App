@@ -3,7 +3,10 @@
 
 export const getDataPlayers= async(page) =>{
 
-    const url=`https://www.balldontlie.io/api/v1/players?page=${page}&per_page=20`;
+    const url=`https://www.balldontlie.io/api/v1/players?page=${page}&per_page=100`;
+
+   
+
 
     const res= await fetch(url);
     const {data}= await res.json();

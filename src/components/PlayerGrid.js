@@ -13,7 +13,13 @@ export const PlayerGrid = ({page}) => {
 },[page]);
     return (
         <>
-            <h3>Players</h3>
+
+            <ul>
+            <li className="names">Player</li>
+            <li className="names">Team</li>
+            <li className="names">Conference</li>
+            <li className="names">Division</li>
+          </ul>
             <div>
             { players.map((player)=>{
             return(
