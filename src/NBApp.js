@@ -8,7 +8,7 @@ export const NBApp = () => {
 
     return (
         <div className="todo">
-            <div className="logo"></div>
+            <div className="logo" ></div>
             <h1>Player List</h1>
         
          {/*    <img src="./images/nba.png" alt="nba logo"/>  */}
