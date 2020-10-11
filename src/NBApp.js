@@ -1,15 +1,21 @@
-import React from 'react'
+import React ,{useState} from 'react'
+import {PlayerGrid} from './components/PlayerGrid'
+import { SelectPage } from './components/SelectPage'
 
 
 export const NBApp = () => {
+    const [page, setPage] = useState("")
 
-    const players= ["jordan","bird"];
     return (
-        <div>
-            <h1>NBA</h1>
-         {    <ul>
-              <li>{players}</li>
-            </ul> }
+        <div className="todo">
+            <div className="logo"></div>
+            <h1>Player List</h1>
+        
+         {/*    <img src="./images/nba.png" alt="nba logo"/>  */}
+            <p>Page: {page} of 33</p>
+            <SelectPage setPage={setPage} />
+            <hr></hr>
+            <PlayerGrid page={page}/>
         </div>
     )
             }

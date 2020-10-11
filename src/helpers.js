@@ -1,21 +1,29 @@
 
 
 
-const getDataPlayers= async() =>{
-    const url=`https://www.balldontlie.io/api/v1/players`;
+export const getDataPlayers= async(page) =>{
+
+    const url=`https://www.balldontlie.io/api/v1/players?page=${page}&per_page=100`;
+
     const res= await fetch(url);
     const {data}= await res.json();
 
-    const player=data.map(statistics=>{
+    /* console.log(data); */
+
+    const players=data.map(player=>{
         return{
-            firstname:statistics.first_name,
-            surname:statistics.last_name,
-            position:statistics.position,
-            team:statistics.team.full_name,
-            conference:statistics.team.conference,
-            division:statistics.team.division
+            firstname:player.first_name,
+            surname:player.last_name,
+            position:player.position,
+            team:player.team.full_name,
+            conference:player.team.conference,
+            division:player.team.division,
+            id:player.id
         }
     })
-    return player;
+    /* console.log(players) */
+    return players;
     }
+
+
 

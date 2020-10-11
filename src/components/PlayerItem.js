@@ -1,23 +1,18 @@
-import React from "react"
-import Proptypes from 'prop-types'
+import React from "react";
+import Proptypes from 'prop-types' 
 
-export const PlayerItem=({firstname,surname,position,team,conference,division})=>{
+export const PlayerItem=({player})=>{
     return(
+          <>
         <ul>
-          <li>{firstname}</li>
-          <li>{surname}</li>
-          <li>{position}</li>
-          <li>{team}</li>
-          <li>{conference}</li>
-          <li>{division}</li>
+          <li>{player.firstname} {player.surname}</li>
+          <li>{player.team}</li>
+          <li>{player.conference}</li>
+          <li>{player.division}</li>
         </ul>
+        </>
     )
 }
-PlayerItem.propTypes={
-    firstname:Proptypes.string.isRequired,
-    surname:Proptypes.string.isRequired,
-    position:Proptypes.string.isRequired,
-    team:Proptypes.string.isRequired,
-    conference:Proptypes.string.isRequired,
-    division:Proptypes.string.isRequired,
-}
+ PlayerItem.propTypes={
+    player:Proptypes.object.isRequired
+} 
