@@ -1,18 +1,19 @@
 import React ,{useState} from 'react'
 import {PlayerGrid} from './components/PlayerGrid'
 import { SelectPage } from './components/SelectPage'
+import logo from './images/nba.png'
 
 
 export const NBApp = () => {
-    const [page, setPage] = useState("")
+    const [page, setPage] = useState("1")
 
     return (
 
         <div className="todo">
-            <div className="logo" ></div>
+            
+            <img src={logo} alt="nba logo" className="logo"/> 
             <h1>Player List</h1>
-        
-         {/*    <img src="./images/nba.png" alt="nba logo"/>  */}
+       
             <p>Page: {page} of 33</p>
             <SelectPage setPage={setPage} />
             <hr></hr>
