@@ -17,4 +17,4 @@ export const PlayerItem=({player})=>{
 }
  PlayerItem.propTypes={
     player:Proptypes.object.isRequired
-} 
+}
